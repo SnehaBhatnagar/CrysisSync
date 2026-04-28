@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Staff Dashboard</title>
   <link rel="stylesheet" href="style.css">
@@ -10,33 +11,15 @@
     <div class="main">
       <nav>
         <a href="#dashboard">Home</a>
-        <a href="#">Resources</a>
+        <a href="resources.html">Resources</a>
       </nav>
-
-      <header id="home"> 
+      <header id="home">
         <h1>CrisisSync</h1>
         <h3>Emergency Response System</h3>
       </header>
     </div>
   </div>
-
   <h3>Dashboard</h3>
-
-  <input type="text" id="search" placeholder="Search..."> 
-
-  <div class="filter">
-    <h3>Filter By:</h3>
-    <select id="filter">
-      <option value="">All</option>
-      <option value="Recent">Recent</option>
-      <option value="Resolved">Resolved</option>
-      <option value="Fire">Fire</option>
-      <option value="Medical">Medical</option>
-      <option value="Disaster">Natural Disaster</option>
-      <option value="Police">Police Complaint</option>
-    </select>
-  </div>
-
   <table id="EmergencyTable" border="1">
     <thead>
       <tr>
@@ -49,13 +32,23 @@
         <th>Action</th>
       </tr>
     </thead>
-
-    <!-- ✅ IMPORTANT: tbody with id -->
     <tbody id="tableBody">
     </tbody>
   </table>
+  <div id="resourceModal" class="modal-overlay">
+    <div class="modal-content">
+      <h2>Dispatch Resource</h2>
+      <p>Select the nearest facility:</p>
 
-  <!-- ✅ CONNECT JS FILE -->
+      <select id="resourceSelect" class="modal-select"></select>
+
+      <div class="modal-btn-group">
+        <button onclick="confirmDispatch()" class="btn-confirm">Confirm</button>
+        <button onclick="closeModal()" class="btn-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
   <script src="staff.js"></script>
 </body>
+
 </html>

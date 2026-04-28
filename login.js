@@ -18,7 +18,7 @@ loginBtn.addEventListener("click", async () => {
       body: JSON.stringify({ name, password })
     });
 
-       const data = await res.json();
+    const data = await res.json();
 
     if (data.success) {
       alert("Login successful");

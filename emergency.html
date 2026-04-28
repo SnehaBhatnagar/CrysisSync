@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>CrisisSync - Emergency</title>
   <link rel="stylesheet" href="emergency.css">
@@ -8,27 +9,21 @@
 <body>
   <div class="container">
     <h1>CrisisSync</h1>
-
     <h2>Select Emergency</h2>
     <select id="type" required>
       <option value="Fire">🔥 Fire</option>
       <option value="Medical">🏥 Medical</option>
       <option value="Police">🚨 Police Complaint</option>
     </select>
-
     <h2>Location</h2>
     <input id="location" type="text" placeholder="Enter Location" required>
     <button onclick="getLocation()">Use Current Location</button>
-
     <h2>Description (Optional)</h2>
     <textarea id="description" placeholder="Describe the situation"></textarea>
-
     <p id="message"></p>
-
     <button onclick="sendSOS()">SEND SOS</button>
   </div>
-   
-
   <script src="emergency.js"></script>
 </body>
+
 </html>

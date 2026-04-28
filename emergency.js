@@ -1,6 +1,5 @@
-// ✅ LOCATION FUNCTION
 async function getLocation() {
-  navigator.geolocation.getCurrentPosition(async function(position) {
+  navigator.geolocation.getCurrentPosition(async function (position) {
 
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
@@ -18,7 +17,7 @@ async function getLocation() {
         data.address.village ||
         "Unknown";
 
-      document.getElementById("location").value = city;
+      document.getElementById("location").value = data.display_name;
 
     } catch (err) {
       console.log(err);
@@ -28,8 +27,6 @@ async function getLocation() {
   });
 }
 
-
-// ✅ SEND SOS FUNCTION
 async function sendSOS() {
   const emergency = document.getElementById("type").value;
   const location = document.getElementById("location").value;
@@ -53,10 +50,10 @@ async function sendSOS() {
     const data = await res.json();
 
     if (data.success) {
-  alert("🚑 Help will reach you soon!");
+      alert("🚑 Help will reach you soon!");
 
-  window.location.href = "index.html";
-}
+      window.location.href = "index.html";
+    }
   } catch (err) {
     console.log(err);
     document.getElementById("message").innerText = "Server error";

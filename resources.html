@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrisisSync - Available Resources</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <a href="staff.html">Back to Dashboard</a>
+            <a href="resources.html" style="color: #ff4d4d;">Resources List</a>
+        </nav>
+        <header>
+            <h1>Emergency Resources</h1>
+            <h3>Registered Hospitals, Fire Stations & Police Hubs</h3>
+        </header>
+    </div>
+    <div class="filter">
+        <input type="text" id="resourceSearch" placeholder="Search by name or type..."
+            style="width: 50%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;">
+    </div>
+    <table id="EmergencyTable">
+        <thead>
+            <tr>
+                <th>Service Name</th>
+                <th>Category</th>
+                <th>Contact/Status</th>
+            </tr>
+        </thead>
+        <tbody id="resourceTableBody">
+        </tbody>
+    </table>
+    <script src="resources.js"></script>
+</body>
+
+</html>
